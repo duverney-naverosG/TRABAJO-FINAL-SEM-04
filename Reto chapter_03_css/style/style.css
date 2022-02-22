@@ -1,0 +1,118 @@
+body {
+    margin: 0 px;
+    /*background-image: radial-gradient(circle at 50% -20.71%, #ff65b3 0, #ff59c0 10%, #ff4ecd 20%, #ff45d9 30%, #ff3fe6 40%, #f23cf2 50%, #d33ffe 60%, #ad46ff 70%, #7b4fff 80%, #0058ff 90%, #0060ff 100%);*/
+}
+
+/* cabezote */
+header {
+    background-color: greenyellow;
+    font-family: Arial;
+    padding: 0px;
+    margin: 0px;
+}
+header h1 {
+    margin: 0 px;
+    padding: 10px;
+    font-size: 250%;
+    text-align: middle;
+}
+
+/* menu horizontal */
+.menu_hor {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: green;
+}
+.menu_hor li {
+    float: left;
+    border-right: 1px solid greenyellow;
+}
+.menu_hor li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 12px 14px;
+    text-decoration: none;
+}
+.menu_hor li:last-child {
+    border-right: none;
+}
+
+/* maquetacion productos y banners */
+section {
+    width: 73%;
+    float: left;
+}
+
+aside img {
+    margin-left: 10px;
+}
+article {
+    clear: both;    
+    /* border-bottom: dashed gray 1 px; */
+}
+
+article img {
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+/* pie de pagina */
+footer {
+    clear: both;
+    background-color: greenyellow;
+    margin: 0px;
+    padding: 5px;
+    font-family: Arial;
+}
+
+.wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(12, [col-start] 1fr);
+    grid-gap: 2px;
+}
+.wrapper > * {
+    padding: 10px;
+    grid-column: col-start / span 12;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width: 500px) {
+  .content {
+    grid-column: col-start / span 9;
+  }
+  .side {
+    grid-column: col-start 10 / span 1;
+  }
+  nav ul {
+    display: flex;
+  }
+  nav ul li {
+    margin-right: 10px;
+  }
+}
+
+@media (min-width: 700px) {
+  .main-nav {
+    grid-column: col-start / span 12;
+  }
+  .content {
+    grid-column: col-start 1 / span 8;
+  }
+  .side {
+    grid-column: col-start 9 / span 2;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+}
